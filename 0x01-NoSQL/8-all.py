@@ -8,9 +8,7 @@ def list_all(mongo_collection):
     """ Connects to Database `my_db` and retrieves documents
     in collection passed as argument
     """
-    client = MongoClient()
-    db = client.my_db
-    result = db.mongo_collection.find()
+    result = mongo_collection.find()
     documents = list(result)
     if not documents:
         return []
